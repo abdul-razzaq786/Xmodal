@@ -8,7 +8,8 @@ function App() {
 
   const closeHandler = (e) => {
     console.log(e.target.className);
-    if (e.target.className === "modal-content") setIsOpen(false);
+    if (e.target.className === "modal-content"){ setIsOpen(false);
+    }
   };
 
   const submitHandler = (e) => {
