@@ -9,7 +9,7 @@
   height: 100%;
   z-index: -1;
   background-color: white;
-  position: fixed;
+  /* position: fixed; */
 }
 .modal-content {
   border: 1px solid gray;
@@ -30,7 +30,6 @@ form {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  border-radius: 8px;
   gap: 10px;
   height: fit-content;
   width: 30%;
@@ -49,14 +48,10 @@ button {
   padding: 10px 20px;
   border-radius: 5px;
   font-size: 1.5rem;
-  width:fit-content;
+  width: 30%;
   margin: 0 auto;
 }
 
 input {
   font-size: 1.2rem;
-  border-radius: 8px;
-}
-label{
-  font-weight: bold;
 }
