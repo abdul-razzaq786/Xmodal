@@ -22,8 +22,9 @@ function App() {
       e.target.email.value = "";
       e.target.phoneNo.value = "";
       e.target.dob.value = "";
+      setIsOpen(false);
     }
-    console.log(e.target.dob.value);
+    // console.log(e.target.dob.value);
   };
 
   return (
