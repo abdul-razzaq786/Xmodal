@@ -1,4 +1,4 @@
-import "./modal.css";
+import "./App.css";
 import React, { useState } from "react";
 function Modal() {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,7 +37,7 @@ function Modal() {
               <h2>Fill Details</h2>
               <div className="input-group">
                 <label htmlFor="username">Username: </label>
-                <input type="text" name="username" id="username" placeholder="Username" required />
+                <input type="text" name="username" id="username" placeholder="Username" required/>
               </div>
               <div className="input-group">
                 <label htmlFor="email">Email Address:</label>
