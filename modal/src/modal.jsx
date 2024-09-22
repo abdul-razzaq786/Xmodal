@@ -27,8 +27,7 @@ function Modal() {
   };
 
   return (
-    <div className="App">
-      <div className="modal">
+    <div style={{textAlign:"center"}} className="modal">
         <h1>User Details Modal</h1>
         <button onClick={clickHandler}>Open Form</button>
         {isOpen && (
@@ -58,8 +57,7 @@ function Modal() {
           </div>
         )}
       </div>
-    </div>
-  );
+    );
 }
 
 export default Modal;
