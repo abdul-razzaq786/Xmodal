@@ -8,7 +8,7 @@ function App() {
 
   const closeHandler = (e) => {
     console.log(e.target.className);
-    if (e.target.className === "modal-content") setIsOpen(false);
+    if (e.target.className === "modal") setIsOpen(false);
   };
 
   const submitHandler = (e) => {
@@ -22,17 +22,16 @@ function App() {
       e.target.email.value = "";
       e.target.phoneNo.value = "";
       e.target.dob.value = "";
-      setIsOpen(false);
     }
     console.log(e.target.dob.value);
   };
 
   return (
     <div className="App">
+      <div className="modal" onClick={closeHandler}>
         <h1>User Details Modal</h1>
         <button onClick={clickHandler}>Open Form</button>
         {isOpen && (
-          <div className="modal" onClick={closeHandler}>
           <div className="modal-content">
             <form onSubmit={submitHandler}>
               <h2>Fill Details</h2>
@@ -57,10 +56,10 @@ function App() {
               </button>
             </form>
           </div>
-          </div>
         )}
       </div>
-    );
+    </div>
+  );
 }
 
 export default App;
