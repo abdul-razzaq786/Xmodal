@@ -22,14 +22,12 @@ function App() {
       e.target.email.value = "";
       e.target.phoneNo.value = "";
       e.target.dob.value = "";
-      setIsOpen(false);
     }
-    // console.log(e.target.dob.value);
+    console.log(e.target.dob.value);
   };
 
   return (
     <div className="App">
-      <div className="modal">
         <h1>User Details Modal</h1>
         <button onClick={clickHandler}>Open Form</button>
         {isOpen && (
@@ -59,8 +57,7 @@ function App() {
           </div>
         )}
       </div>
-    </div>
-  );
+    );
 }
 
 export default App;
