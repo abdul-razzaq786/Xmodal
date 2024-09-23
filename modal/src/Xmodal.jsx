@@ -17,7 +17,7 @@ const XModal = () => {
 
   const validateForm = () => {
     const { username, email, dob, phone } = formData;
-
+  
     if (!username) {
       alert('Please fill out the Username field.');
       return false;
@@ -34,26 +34,30 @@ const XModal = () => {
       alert('Please fill out the Phone Number field.');
       return false;
     }
-
+  
+    // Email validation
     if (!email.includes('@')) {
       alert('Invalid email. Please check your email address.');
       return false;
     }
+  
+    // Phone number validation
     if (phone.length !== 10 || isNaN(phone)) {
       alert('Invalid phone number. Please enter a 10-digit phone number.');
       return false;
     }
-    
+  
+    // Date of Birth validation
     const today = new Date();
     const birthDate = new Date(dob);
     if (birthDate > today) {
       alert('Invalid Date of Birth. Please enter a valid date.');
       return false;
     }
-
+  
     return true; // All validations passed
   };
-
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateForm()) {
