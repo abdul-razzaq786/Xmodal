@@ -17,17 +17,39 @@ const XModal = () => {
 
   const validateForm = () => {
     const { username, email, dob, phone } = formData;
-    if (!username) return alert('Please fill out the Username field.');
-    if (!email) return alert('Please fill out the Email field.');
-    if (!dob) return alert('Please fill out the Date of Birth field.');
-    if (!phone) return alert('Please fill out the Phone Number field.');
 
-    if (!email.includes('@')) return alert('Invalid email. Please check your email address.');
-    if (phone.length !== 10 || isNaN(phone)) return alert('Invalid phone number. Please enter a 10-digit phone number.');
+    if (!username) {
+      alert('Please fill out the Username field.');
+      return false;
+    }
+    if (!email) {
+      alert('Please fill out the Email field.');
+      return false;
+    }
+    if (!dob) {
+      alert('Please fill out the Date of Birth field.');
+      return false;
+    }
+    if (!phone) {
+      alert('Please fill out the Phone Number field.');
+      return false;
+    }
+
+    if (!email.includes('@')) {
+      alert('Invalid email. Please check your email address.');
+      return false;
+    }
+    if (phone.length !== 10 || isNaN(phone)) {
+      alert('Invalid phone number. Please enter a 10-digit phone number.');
+      return false;
+    }
     
     const today = new Date();
     const birthDate = new Date(dob);
-    if (birthDate > today) return alert('Invalid Date of Birth. Please enter a valid date.');
+    if (birthDate > today) {
+      alert('Invalid Date of Birth. Please enter a valid date.');
+      return false;
+    }
 
     return true; // All validations passed
   };
