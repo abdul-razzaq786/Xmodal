@@ -9,6 +9,7 @@ function App() {
   };
 
   const closeHandler = (e) => {
+    console.log('Clicked target:', e.target.className);
     // Close modal if the click target is the modal background
     if (e.target.classList.contains("modal")) {
       setIsOpen(false);
