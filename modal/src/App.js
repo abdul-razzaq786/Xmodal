@@ -53,7 +53,7 @@ function App() {
               </div>
               <div className="input-group">
                 <label htmlFor="phoneNo">Phone Number:</label>
-                <input type="number" name="phoneNo" id="phoneNo" required />
+                <input type="number" name="phoneNo" id="phone" required />
               </div>
               <div className="input-group">
                 <label htmlFor="dob">Date of Birth:</label>
